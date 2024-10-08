@@ -12,10 +12,9 @@ import {getUsers,
   
   router.get('/', getUsers);
   router.get('/:id', getUserById);
-  router.post('/', createUser);
+  router.post('/',authenticateKey, createUser);
   router.put('/:id', updateUser);
   router.delete('/:id', deleteUser);
-  router.post('/', authenticateKey, createUser);
   
   export default router;
   
